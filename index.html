@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+
+<body bgcolor="orange">
+
+    <table border="1" align="center" width="60%">
+        <tr>
+            <th>
+                <h1>Grade Checker </h1>
+
+            </th>
+
+        <tr>
+            <th align="left">
+
+                <h2> Enter Obtained Marks </h2>
+                <input type="number" id="nmb">
+                <button onclick="submit()">Submit</button>
+                <h2 id="result"> </h2>
+
+            </th>
+        </tr>
+    </table>
+
+
+    <script>
+
+        function submit() {
+            var EnteredObtainedMarks = document.getElementById("nmb").value;
+            var result;
+
+            if (EnteredObtainedMarks >= 90 && EnteredObtainedMarks <=100) {
+                result = "Grade A";
+
+                document.getElementById("result").innerHTML = result;
+            }
+
+            else if (EnteredObtainedMarks >= 80 && EnteredObtainedMarks <=89)
+            {
+                result = "Grade B";
+
+                document.getElementById("result").innerHTML = result;
+            }
+
+            else if (EnteredObtainedMarks >= 70 && EnteredObtainedMarks <=79)
+            {
+                result = "Grade C";
+
+                document.getElementById("result").innerHTML = result;
+            }
+
+            else if (EnteredObtainedMarks >= 60 && EnteredObtainedMarks <=69)
+            {
+                result = "Grade D";
+
+                document.getElementById("result").innerHTML = result;
+            }
+
+            else if (EnteredObtainedMarks < 60 )
+            {
+                result = "Grade F";
+
+                document.getElementById("result").innerHTML = result;
+            }
+
+            else {
+                result = "Invalid Entry! ";
+                document.getElementById("result").innerHTML = result;
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html> 
